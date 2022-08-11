@@ -1,0 +1,85 @@
+.bar-block{
+    width:100%;
+}
+.bar-block .bar-item{
+    width:100%;
+    display:block;
+    padding:8px 16px;
+    text-align:left;
+    border:none;
+    white-space:normal;
+    float:none;outline:0
+}
+.bar-block.center .bar-item{
+    text-align:center
+}
+.bar-block .button,.bar-block .button{
+    width:100%;
+    text-align:left;
+    padding:8px 16px
+}
+.btn,.button{
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap
+}
+.btn,.button{
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+} 
+.btn:disabled,.button:disabled{
+    cursor:not-allowed;opacity:0.3
+}
+.button:hover{
+    color:#000!important;
+    background-color:#ccc!important
+}
+.card-4{
+    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),
+    0 4px 20px 0 rgba(0,0,0,0.19)
+}
+.input{
+    padding:8px;
+    display:block;
+    border:none;
+    border-bottom:1px solid #ccc;
+    width:100%
+}
+.btn:hover{
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+}
+.btn,.btn:disabled:hover{
+    box-shadow:none
+}
+.select{
+    padding:9px 0;
+    width:100%;
+    border:none;
+    border-bottom:1px solid #ccc
+}
+.bar-item{
+    padding:8px 16px;
+    float:left;
+    width:auto;
+    border:none;
+    display:block;
+    outline:0
+}
+.large{
+    font-size:18px!important
+}
+.sidebar1{
+    height:100%;width:200px;background-color:#fff;position:fixed!important;z-index:1;overflow:auto
+}
