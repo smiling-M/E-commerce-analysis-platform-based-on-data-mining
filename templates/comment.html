@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aliexpress Analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="static/css/color.css">
+    <link rel="stylesheet" type="text/css" href="static/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="static/css/component.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar light-grey bar-block" style="width:20%">
+        <h3 class="bar-item">Menu</h3>
+        <a href="/" class="bar-item button">Item Analysis</a>
+        <a href="/comment" class="bar-item button">Comment Analysis</a>
+        <a href="/price_track" class="bar-item button">Price tracker</a>
+    </div>
+    <div style="margin-left:20%">
+
+        <div class="container teal center-text">
+            <h1 >Aliexpress Analysis</h1>
+        </div>
+        <form class="container" action="/comment_visualization" method="POST">
+            <h2 class="text-red">input the item link</h2>
+            <p>
+                <label class="text-red"><b>link</b></label>
+                <input class="input border" name="link" type="text"></p>
+            <p>
+                <button type="submit" class="btn button-red" >wordcloud</button></p>
+        </form>
+        <form class="container" action="/comment_topic" method="POST">
+            <p>
+                <label class="text-red"><b>link</b></label>
+                <input class="input border" name="link1" type="text"></p>
+            <p>
+                <button type="submit" class="btn button-red" >topic</button></p>
+        </form>
+        
+        <!-- <form class="container" action="/comment_visualization" method="POST">
+            
+            <p>
+                <button type="submit" class="btn button-red" >wordcloud</button></p>
+        </form> -->
+        <!-- <form class="container" action="/comment_topic" method="POST">
+            
+            <p>
+                <button type="submit" class="btn button-red" >topic</button></p>
+        </form> -->
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aliexpress Analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="static/css/color.css">
+    <link rel="stylesheet" href="static/css/layout.css">
+    <link rel="stylesheet" href="static/css/component.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/w3_css.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar light-grey bar-block" style="width:20%">
+        <h3 class="bar-item">Menu</h3>
+        <a href="/" class="bar-item button">Item Analysis</a>
+        <a href="/comment" class="bar-item button">Comment Analysis</a>
+        <a href="/price_track" class="bar-item button">Price tracker</a>
+    </div>
+    <div style="margin-left:20%">
+
+        <div class="container teal center-text">
+            <h1 >Aliexpress Analysis</h1>
+        </div>
+        <!-- <input type="button" class="btn button-red" onclick="javascript:refreshFrame();" value="Refresh Frame" /> -->
+        
+        <div style="position: absolute;width:300px;">
+            <img src="{{url_for('static',filename='img.jpg',_t=val1)}}" height="300px" id="img">
+        </div>
+        <div style="position: absolute;left:550px;margin-left:10px;">
+            <p>{{data2}}</p>
+            <table>
+                <tr>
+                    <td><h3>UK ￡{{data3}}&nbsp&nbsp</h3></td>
+                    <td><h3 style="color: grey;"><del>UK ￡{{data1}}</del></h3></td>
+                </tr>
+            </table>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+        <div style="position:absolute;top: 400px;left: 300px;">
+            <table style="width:900px;">
+                <tr style="background-color: #f1f1f1;">
+                    <td>Desired price</td>
+                    <td>Current price</td>
+                    <td>Email</td>
+                </tr>
+                <form action="/price_track2" method="POST">
+                <tr >
+                    <td>￡<input type="text" style="width: 50%;"></td>
+                    <td>￡{{data3}}</td>
+                    <td><input type="text" style="width: 90%;" name="email1"></td>
+                    <td><button  type="submit" class="btn button-red">submmit</button></td>
+                </tr>
+                </form>
+                
+            </table>
+        </div>
+    </div>
+        
+    
+        
+        
+        <!-- <div>
+        <iframe id="topic" frameborder=0 src="static/charts/lda_pass10.html?_='+randomnumber+'" width="100%" height="450"></iframe>
+        </div> -->
+        <script>
+            // function refreshFrame(){
+            //     document.getElementById('img').contentWindow.location.reload(true);
+            // }
+            img.attr('src', data.message+'?'+Math.random());
+        </script>
+    </div>
+</body>
+</html>

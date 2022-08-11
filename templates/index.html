@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aliexpress Analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="static/css/color.css">
+    <link rel="stylesheet" href="static/css/layout.css">
+    <link rel="stylesheet" href="static/css/component.css">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar light-grey bar-block" style="width:20%">
+    <h3 class="bar-item">Menu</h3>
+    <a href="/" class="bar-item button">Item Analysis</a>
+    <a href="/comment" class="bar-item button">Comment Analysis</a>
+    <a href="/price_track" class="bar-item button">Price tracker</a>
+</div>
+
+<!-- Page Content -->
+<div style="margin-left:20%">
+
+    <div class="container teal center-text">
+        <h1 >Aliexpress Analysis</h1>
+    </div>
+    <form class="container" action="/item" method="POST">
+        <h2 class="text-red">input your keywords</h2>
+        <p>
+            <label class="text-red"><b>keywords</b></label>
+            <input class="input border" name="input" type="text"></p>
+        <p>
+            <button type="submit" class="btn button-red" >submmit</button></p>
+    </form>
+
+</div>
+
+</body>
+</html>

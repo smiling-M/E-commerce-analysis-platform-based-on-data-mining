@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aliexpress Analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> -->
+    <link rel="stylesheet" type="text/css" href="static/css/color.css">
+    <link rel="stylesheet" href="static/css/layout.css">
+    <link rel="stylesheet" href="static/css/component.css">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar light-grey bar-block" style="width:20%">
+    <h3 class="bar-item">Menu</h3>
+    <a href="/" class="bar-item button">Item Analysis</a>
+    <a href="/comment" class="bar-item button">Comment Analysis</a>
+    <a href="#" class="bar-item button">Price tracker</a>
+</div>
+
+<!-- Page Content -->
+<div style="margin-left:20%">
+    
+    <div class="container teal center-text">
+        <h1 >Aliexpress Analysis</h1>
+    </div>
+    
+    <!-- <form class="container" action="/item" method="POST">
+        <h2 class="text-red">input your keywords</h2>
+        <p>
+            <label class="text-red"><b>keywords</b></label>
+            <input class="input border" name="input" type="text"></p>
+        <p>
+            <button  type="submit" class="btn button-red" >submmit</button></p>
+    </form> -->
+    <script>
+        function refreshFrame(){
+            document.getElementById('pricedistributionpage').contentWindow.location.reload(true);
+            document.getElementById('pricepage').contentWindow.location.reload(true);
+            document.getElementById('soldpage').contentWindow.location.reload(true);
+            document.getElementById('starpage').contentWindow.location.reload(true);
+            document.getElementById('countpage').contentWindow.location.reload(true);
+            document.getElementById('pricesoldpage').contentWindow.location.reload(true);
+        }
+        function show() {
+            if (form_select.option.value=="1") 
+            {
+                price_distribution.style.visibility="visible";
+            }
+            else{
+                price_distribution.style.visibility="hidden";
+            }
+            if (form_select.option.value=="2") 
+            {
+                price.style.visibility="visible";
+            }
+            else{
+                price.style.visibility="hidden";
+            }
+            if (form_select.option.value=="3") 
+            {
+                sold.style.visibility="visible";
+            }
+            else{
+                sold.style.visibility="hidden";
+            }
+            if (form_select.option.value=="4") 
+            {
+                star.style.visibility="visible";
+            }
+            else{
+                star.style.visibility="hidden";
+            }
+            if (form_select.option.value=="5") 
+            {
+                count.style.visibility="visible";
+            }
+            else{
+                count.style.visibility="hidden";
+            }
+            if (form_select.option.value=="6") 
+            {
+                price_sold.style.visibility="visible";
+            }
+            else{
+                price_sold.style.visibility="hidden";
+            }
+       }
+       
+        
+   </script>
+    <input type="button" class="btn button-red" onclick="javascript:refreshFrame();" value="Refresh Frame" />
+    <form name="form_select" class="container" action="/item" >
+    
+        <select class="select" name="option" onChange = "show()">
+            <option value="" disabled selected>选择你的选项</option>
+            <option value="1" onclick="javascript:refreshFrame();">price distribution</option>
+            <option value="2" onclick="javascript:refreshFrame();">price</option>
+            <option value="3" onclick="javascript:refreshFrame();">sold</option>
+            <option value="4" onclick="javascript:refreshFrame();">star</option>
+            <option value="5" onclick="javascript:refreshFrame();">count</option>
+            <option value="6" onclick="javascript:refreshFrame();">price-sold</option>
+        </select>
+    
+        <!-- <p><button class="btn teal">登记</button></p> -->
+    </form>
+    <div id="price_distribution" style = "position:absolute;width:1000px; height:450px;visibility: hidden">
+        <iframe id="pricedistributionpage" frameborder=0 src="static/charts/price_distribution.html?_='+randomnumber+'" width="100%" height="450"></iframe>
+    </div>
+    <div id="price" style = "position:absolute; width:1000px;height:450px; visibility: hidden">
+        <iframe id="pricepage" frameborder=0 src="static/charts/price.html" width="100%" height="450"></iframe>
+    </div>
+    <div id="sold" style = "position:absolute; width:1000px;height:450px;visibility: hidden">
+        <iframe id="soldpage" frameborder=0 src="static/charts/sold.html?_='+randomnumber+'" width="100%" height="450"></iframe>
+    </div>
+    <div id="star" style = "position:absolute; width:1000px;height:450px;visibility: hidden">
+        <iframe id="starpage" frameborder=0 src="static/charts/star.html?_='+randomnumber+'" width="100%" height="450"></iframe>
+    </div>
+    <div id="count" style = "position:absolute;width:1000px;height:450px;visibility: hidden">
+        <iframe id="countpage" frameborder=0 src="static/charts/store_count.html?_='+randomnumber+'" width="100%" height="450"></iframe>
+    </div>
+    <div id="price_sold" style = "position:absolute;width:1000px; height:450px;visibility: hidden">
+        <iframe id="pricesoldpage" frameborder=0 src="static\charts\price_sold.html" width="100%" height="450"></iframe>
+    </div>
+
+</div>
+
+</body>
+</html>
